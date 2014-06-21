@@ -9,12 +9,12 @@
 #include <vector>
 
 #define _RECEIVER_ADDR_ 					"tcp://*:4242"
-#define _SENDER_ADDR_							"tcp://*:4343"
+#define _SENDER_ADDR_						"tcp://*:4343"
 
-#define	_SERIALIZED_BUFFER_PATH_	"./serialized_buffer.txt"
+#define	_SERIALIZED_BUFFER_PATH_            "./serialized_buffer.txt"
 
 
-typedef char							buffer_type;
+typedef char	buffer_type;
 
 void receiver_thread(zmq::context_t* context, st::shared_buffer<buffer_type>* shared_buff, bool* exit_thread)
 {
@@ -95,14 +95,13 @@ void sender_thread(zmq::context_t* context, st::shared_buffer<buffer_type>* shar
 			}
 			else
 			{
-				//std::cout << "Sleeping 1 sec. Empty queue..." << std::endl;
 				//std::this_thread::sleep_for (std::chrono::milliseconds(100));
 			}
 		}
 	}
 	catch(...)
 	{
-		shared_buff->push(buffer, part_message);
+		shared_buff->push_front(buffer, part_message);
 		std::cerr << "Exiting sender thread..." << std::endl;
 	}
 }
