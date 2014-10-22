@@ -17,15 +17,15 @@ Performance_ObjectiveC.sortArrayObjC(num_elements)
 //println("Hello, World!")
 
 
-let x = Int[](count: num_elements, repeatedValue: 0)
-for i in 0..num_elements {
-    x[i] = random()
+var int_array = [Int](count: num_elements, repeatedValue: 0)
+for i in 0...(num_elements-1) {
+    int_array[i] = random()
 }
 
     // Put the code you want to measure the time of here.
 let start : NSDate = NSDate()
 
-let y = sort(x)
+let sorted_array = sorted(int_array, <)
 
 let end : NSDate = NSDate()
 
