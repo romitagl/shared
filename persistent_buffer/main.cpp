@@ -39,19 +39,26 @@ void receiver_thread(zmq::context_t* context, st::shared_buffer<buffer_type>* sh
 			receiver.recv(&message);
 			
 			const size_t msg_size = message.size();
-			std::vector<char> buffer(msg_size);
-			bool part_message = true;
-			
-			memcpy((void *)&buffer[0], message.data (), msg_size);
+			st::buffer_obj buffer;
+			buffer.msg_size = msg_size;
+			buffer.msg = (char*) malloc(msg_size);
+			buffer.part_message = false;
+			memcpy((void *)&buffer.msg[0], message.data (), msg_size);
 	
-			if(!message.more())
+			if(message.more())
 			{
-				part_message = false;
+				/*receiver.recv(&message);
+				size_t new_msg_size = message.size();
+				buffer.msg = (char*) realloc(buffer.msg, (buffer.msg_size + new_msg_size));
+				memcpy((void *)&buffer.msg[buffer.msg_size], message.data (), new_msg_size);	
+				buffer.msg_size += new_msg_size;*/
+				buffer.part_message = true;
 			}
 	
-			shared_buff->push(buffer, part_message);
+			shared_buff->push(buffer);
+
 			//std::stringstream print_buffer(static_cast<char*>(message.data()));
-			//std::cout << print_buffer.str() << std::endl;
+			//std::cout << "\n receiver_thread - storing: " << buffer.msg << std::endl;
 		}
 	}
 	catch(...)
@@ -74,24 +81,22 @@ void sender_thread(zmq::context_t* context, st::shared_buffer<buffer_type>* shar
 		exit(1);
 	}
 	
-	std::vector<char> buffer;
-	bool part_message;
-	
 	try
 	{
 		while(!*exit_thread)
-		{		 	
-			if(shared_buff->pop(buffer, part_message))
+		{	
+			st::buffer_obj	buffer; 	
+			if(shared_buff->pop(buffer))
 			{
 				//std::cout << std::endl << "Sending message: ";
 	
 				//std::stringstream print_buffer(static_cast<char*>((*reply).data()));
-				//std::cout << "\n sender_thread - sending: " << print_buffer.str() << std::endl;
+				//std::cout << "\n sender_thread - sending: " << buffer.msg << std::endl;
 				
-				zmq::message_t reply (buffer.size());
-				memcpy((void *) reply.data (), &buffer[0], buffer.size());
-	
-				sender.send(reply, part_message ? ZMQ_SNDMORE : 0);
+				zmq::message_t reply (buffer.msg_size);
+				memcpy((void *) reply.data (), buffer.msg, buffer.msg_size);
+				sender.send(reply, buffer.part_message ? ZMQ_SNDMORE : 0);
+				free(buffer.msg);
 			}
 			else
 			{
@@ -101,7 +106,7 @@ void sender_thread(zmq::context_t* context, st::shared_buffer<buffer_type>* shar
 	}
 	catch(...)
 	{
-		shared_buff->push_front(buffer, part_message);
+		//shared_buff->push_front(buffer, part_message);
 		std::cerr << "Exiting sender thread..." << std::endl;
 	}
 }
@@ -112,7 +117,7 @@ int main (int argc, char *argv[])
 	st::shared_buffer<buffer_type> shared_buff;
 	bool exit_thread = false;
 		
-	shared_buff.deserialize(_SERIALIZED_BUFFER_PATH_);
+	//shared_buff.deserialize(_SERIALIZED_BUFFER_PATH_);
 	
 	try
 	{
@@ -138,7 +143,7 @@ int main (int argc, char *argv[])
 		std::cerr << "main exception!" << std::endl;
 	}
 	
-	shared_buff.serialize(_SERIALIZED_BUFFER_PATH_);
+	//shared_buff.serialize(_SERIALIZED_BUFFER_PATH_);
 		
 	return 0;
 }
