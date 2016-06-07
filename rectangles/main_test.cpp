@@ -7,7 +7,7 @@
 
 // this test executable implements a first set of robustness and correcteness tests
 // specific unit tests should be implemented using Cppunit or GoogleTest
-int main(int argc, char* argv[])
+int main()
 {
   // -- invalid input path --
   {
