@@ -105,6 +105,8 @@
 		0C0506B3194866A700847957 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Gian Luigi Romita";
 				TargetAttributes = {

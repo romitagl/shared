@@ -25,10 +25,10 @@ for i in 0...(num_elements-1) {
     // Put the code you want to measure the time of here.
 let start : NSDate = NSDate()
 
-let sorted_array = int_array.sort(<)
+let sorted_array = int_array.sortInPlace(<)
 
 let end : NSDate = NSDate()
 
 let executionTime : NSTimeInterval = end.timeIntervalSinceDate(start)
 
-print("swift executionTime: \(executionTime) seconds for \(num_elements) elements. \n");
+print("swift executionTime: \(executionTime) seconds for \(num_elements) elements. \n", terminator: "");
