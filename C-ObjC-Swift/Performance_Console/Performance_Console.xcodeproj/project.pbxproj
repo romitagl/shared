@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0506BF194866A700847957 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0506BE194866A700847957 /* main.swift */; };
+		0C37DA6819487E4200CE6CA2 /* ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DA6719487E4200CE6CA2 /* ObjC.m */; };
+		0C37DA6C1948EFC700CE6CA2 /* CPlusPlus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DA6B1948EFC700CE6CA2 /* CPlusPlus.cpp */; };
+		0C37DA6E1949B5E100CE6CA2 /* ObjCtoCPlusPlus.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DA6D1949B5E100CE6CA2 /* ObjCtoCPlusPlus.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C0506B9194866A700847957 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0C0506BB194866A700847957 /* Performance_Console */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Performance_Console; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0506BE194866A700847957 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0C37DA6619487E4200CE6CA2 /* Performance_Console-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Performance_Console-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C37DA6719487E4200CE6CA2 /* ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjC.m; sourceTree = "<group>"; };
+		0C37DA691948AA7A00CE6CA2 /* ObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjC.h; sourceTree = "<group>"; };
+		0C37DA6A1948EF5B00CE6CA2 /* CPlusPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPlusPlus.h; sourceTree = "<group>"; };
+		0C37DA6B1948EFC700CE6CA2 /* CPlusPlus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPlusPlus.cpp; sourceTree = "<group>"; };
+		0C37DA6D1949B5E100CE6CA2 /* ObjCtoCPlusPlus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCtoCPlusPlus.mm; sourceTree = "<group>"; };
+		0C37DA6F1949B6BF00CE6CA2 /* ObjCtoCPlusPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCtoCPlusPlus.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C0506B8194866A700847957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C0506B2194866A700847957 = {
+			isa = PBXGroup;
+			children = (
+				0C0506BD194866A700847957 /* Performance_Console */,
+				0C0506BC194866A700847957 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C0506BC194866A700847957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C0506BB194866A700847957 /* Performance_Console */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C0506BD194866A700847957 /* Performance_Console */ = {
+			isa = PBXGroup;
+			children = (
+				0C0506BE194866A700847957 /* main.swift */,
+				0C37DA6719487E4200CE6CA2 /* ObjC.m */,
+				0C37DA691948AA7A00CE6CA2 /* ObjC.h */,
+				0C37DA6A1948EF5B00CE6CA2 /* CPlusPlus.h */,
+				0C37DA6B1948EFC700CE6CA2 /* CPlusPlus.cpp */,
+				0C37DA6619487E4200CE6CA2 /* Performance_Console-Bridging-Header.h */,
+				0C37DA6D1949B5E100CE6CA2 /* ObjCtoCPlusPlus.mm */,
+				0C37DA6F1949B6BF00CE6CA2 /* ObjCtoCPlusPlus.h */,
+			);
+			path = Performance_Console;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C0506BA194866A700847957 /* Performance_Console */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C0506C2194866A700847957 /* Build configuration list for PBXNativeTarget "Performance_Console" */;
+			buildPhases = (
+				0C0506B7194866A700847957 /* Sources */,
+				0C0506B8194866A700847957 /* Frameworks */,
+				0C0506B9194866A700847957 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Performance_Console;
+			productName = Performance_Console;
+			productReference = 0C0506BB194866A700847957 /* Performance_Console */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C0506B3194866A700847957 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Gian Luigi Romita";
+				TargetAttributes = {
+					0C0506BA194866A700847957 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 0C0506B6194866A700847957 /* Build configuration list for PBXProject "Performance_Console" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0C0506B2194866A700847957;
+			productRefGroup = 0C0506BC194866A700847957 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C0506BA194866A700847957 /* Performance_Console */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C0506B7194866A700847957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0506BF194866A700847957 /* main.swift in Sources */,
+				0C37DA6819487E4200CE6CA2 /* ObjC.m in Sources */,
+				0C37DA6E1949B5E100CE6CA2 /* ObjCtoCPlusPlus.mm in Sources */,
+				0C37DA6C1948EFC700CE6CA2 /* CPlusPlus.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0C0506C0194866A700847957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Performance_Console/Performance_Console-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C0506C1194866A700847957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Performance_Console/Performance_Console-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		0C0506C3194866A700847957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Performance_Console/Performance_Console-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C0506C4194866A700847957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Performance_Console/Performance_Console-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C0506B6194866A700847957 /* Build configuration list for PBXProject "Performance_Console" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0506C0194866A700847957 /* Debug */,
+				0C0506C1194866A700847957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C0506C2194866A700847957 /* Build configuration list for PBXNativeTarget "Performance_Console" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0506C3194866A700847957 /* Debug */,
+				0C0506C4194866A700847957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C0506B3194866A700847957 /* Project object */;
+}
