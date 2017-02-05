@@ -22,10 +22,10 @@ for i in 0...(num_elements-1) {
     int_array[i] = Int(arc4random())
 }
 
-    // Put the code you want to measure the time of here.
+// Put the code you want to measure the time of here.
 let start : Date = Date()
 
-let sorted_array = int_array.sort(by: <)
+int_array.sort(by: <)
 
 let end : Date = Date()
 
