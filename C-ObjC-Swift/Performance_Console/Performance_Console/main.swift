@@ -17,18 +17,18 @@ Performance_ObjectiveC.sortArrayObjC(num_elements)
 //println("Hello, World!")
 
 
-var int_array = [Int](count: num_elements, repeatedValue: 0)
+var int_array = [Int](repeating: 0, count: num_elements)
 for i in 0...(num_elements-1) {
-    int_array[i] = random()
+    int_array[i] = Int(arc4random())
 }
 
-    // Put the code you want to measure the time of here.
-let start : NSDate = NSDate()
+// Put the code you want to measure the time of here.
+let start : Date = Date()
 
-let sorted_array = int_array.sortInPlace(<)
+int_array.sort(by: <)
 
-let end : NSDate = NSDate()
+let end : Date = Date()
 
-let executionTime : NSTimeInterval = end.timeIntervalSinceDate(start)
+let executionTime : TimeInterval = end.timeIntervalSince(start)
 
 print("swift executionTime: \(executionTime) seconds for \(num_elements) elements. \n", terminator: "");
