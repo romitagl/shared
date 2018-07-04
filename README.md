@@ -26,7 +26,8 @@ XCode project, demonstrates how to integrate C++, ObjectiveC and Swift.
 - Swift
 
 ## openssl-crypto
-Wrapper for openssl-crypto. Easily perform encryption/decryption operations using all the openssl supported ciphers.
+C++ wrapper for OpenSSL EVP Crypto library. Easily perform encryption/decryption operations using all the OpenSSL supported ciphers.
 ### Technologies used:
-- c++0x
-- OpenSSL crypto 
+- c++03
+- OpenSSL EVP Crypto I/F (https://wiki.openssl.org/index.php/EVP)
+- POSIX threads
