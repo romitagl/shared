@@ -1,9 +1,10 @@
-Copyright (c) 2016 Gian Luigi Romita (romitagl@gmail.com)
+Copyright (c) 2018 Gian Luigi Romita (romitagl@gmail.com)
 
 # Projects
 - rectangles
 - persistent_buffer
 - C-ObjC-Swift
+- openssl-crypto
 
 ## rectangles
 This program parses an input JSON file containing rectangles coordinates and returns the overlaps.
@@ -23,3 +24,9 @@ XCode project, demonstrates how to integrate C++, ObjectiveC and Swift.
 - ObjectiveC
 - c++0x
 - Swift
+
+## openssl-crypto
+Wrapper for openssl-crypto. Easily perform encryption/decryption operations using all the openssl supported ciphers.
+### Technologies used:
+- c++0x
+- OpenSSL crypto 
